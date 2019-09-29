@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "994475258952",
+    "firebase_url": "https://easy-campaign.firebaseio.com",
+    "project_id": "easy-campaign",
+    "storage_bucket": "easy-campaign.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994475258952:android:ed8f90283bf987ddebd47d",
+        "android_client_info": {
+          "package_name": "br.com.easycampaign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994475258952-fc2d9f6vbdnmq1afm9hd3juc79tv57ms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqhka89wymtFL_owgvY8_VSjCJp8L8kv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994475258952-fc2d9f6vbdnmq1afm9hd3juc79tv57ms.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

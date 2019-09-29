@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imgRegistro"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/easycampaign" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgRegistro"
+        android:drawableStart="@drawable/ic_action_email_light"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:background="@color/cinza"
+        android:inputType="textEmailAddress"
+        android:textAlignment="viewEnd"
+        android:hint="@string/email"
+        android:textSize="24sp"
+        android:autofillHints="" />
+
+
+    <EditText
+        android:id="@+id/edtSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtEmail"
+        android:drawableStart="@drawable/ic_action_senha_light"
+        android:layout_alignStart="@+id/edtEmail"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:background="@color/cinza"
+        android:inputType="textPassword"
+        android:textAlignment="viewEnd"
+        android:hint="@string/senha"
+        android:textSize="24sp"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/edtConfirmacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtSenha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:background="@color/cinza"
+        android:inputType="textEmailAddress"
+        android:textAlignment="viewEnd"
+        android:hint="@string/confirme_sua_senha"
+        android:textSize="24sp"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btnRegistro"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/entrar"
+        android:background="@drawable/bg_btn_azul_marinho"
+        android:textAllCaps="false"
+        android:textColor="@color/branco"
+        android:textSize="20sp"
+        android:layout_below="@id/edtConfirmacao"
+        android:layout_centerHorizontal="true"
+        android:layout_alignStart="@id/edtConfirmacao"
+        android:layout_marginTop="60dp"/>
+
+    <TextView
+        android:id="@+id/txtRegistrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/cinza_rebelde"
+        android:layout_below="@id/btnRegistro"
+        android:layout_centerHorizontal="true"
+        android:text="@string/j_tem_uma_conta"/>
+
+</RelativeLayout>
