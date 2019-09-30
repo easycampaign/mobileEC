@@ -4,9 +4,17 @@
     <string name="email">Email</string>
     <string name="entrar">Entrar</string>
     <string name="gerenciamento_inteligente_e_mais_assertivo_de_campanhas_de_marketing">Gerenciamento inteligente e mais assertivo de campanhas de marketing</string>
-    <string name="bora_la">Bora la?</string>
+    <string name="bora_la">Começar?</string>
     <string name="easy_campaign">Easy Campaign</string>
     <string name="ainda_n_o_tem_uma_conta_registre_se">Ainda não tem uma conta? Registre-se!</string>
     <string name="confirme_sua_senha">Confirme sua senha</string>
     <string name="j_tem_uma_conta">Já tem uma conta? Clique aqui</string>
+    <string name="orcamento">Orçamento</string>
+    <string name="cheque_suas_campanhas">Cheque o orçamento de suas campanhas</string>
+    <string name="desempenho_da_loja">Desempenho da loja</string>
+    <string name="acompanhe_o_desempenho_de_sua_loja">Acompanhe o desempenho de sua loja</string>
+    <string name="campanhas_ativas">Campanhas Ativas</string>
+    <string name="calendario">Calendário</string>
+    <string name="estoque_atual">Estoque atual</string>
+    <string name="texto_aqui">Texto aqui</string>
 </resources>

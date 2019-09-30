@@ -24,14 +24,12 @@ public class CadastroActivity extends AppCompatActivity {
     Button btnRegistro;
     FirebaseAuth mFirebaseAuth;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
-
 
         edtEmail = findViewById(R.id.edtEmail);
         edtSenha = findViewById(R.id.edtSenha);
@@ -41,7 +39,6 @@ public class CadastroActivity extends AppCompatActivity {
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Boolean valido = true;
                 String email = edtEmail.getText().toString().trim().toLowerCase();
                 String senha = edtSenha.getText().toString();
@@ -79,7 +76,6 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void adicionarUsuario(String email, String senha, String confirmacao, Boolean valido){
-
         // Validacao de confirmacao de senha
         if(senha.equals(confirmacao)){
             valido = true;
@@ -101,9 +97,6 @@ public class CadastroActivity extends AppCompatActivity {
                     }
                 }
             });
-
         }
-
     }
-
 }

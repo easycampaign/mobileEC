@@ -8,5 +8,13 @@
     <color name="verdinho">#48B9AC</color>
     <color name="cinza">#E6E6E6</color>
     <color name="preto">#000</color>
+    <color name="dashboardPrimary">#FFC107</color>
+    <color name="dashboardPrimaryDark">#FFA000</color>
+    <color name="backgroundColor">#fcfcfc</color>
+    <color name="lightGray">#ededed</color>
+    <color name="deepPurple">#7c4dff</color>
     <color name="cinza_rebelde">#A0A0A0</color>
+    <color name="materialYellow">#FFEB3B</color>
+    <color name="materialGreen">#00bfa5</color>
+    <color name="pinkAccent">#ff4081</color>
 </resources>

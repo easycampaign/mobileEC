@@ -94,7 +94,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
         txtRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,7 +101,6 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
-
     }
 
     @Override
