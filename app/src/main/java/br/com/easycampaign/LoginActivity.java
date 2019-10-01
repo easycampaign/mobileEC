@@ -35,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         edtSenha = findViewById(R.id.edtSenha);
         btnLogin = findViewById(R.id.btnLogin);
         txtRegistro = findViewById(R.id.txtRegistro);
+        mFirebaseAuth = FirebaseAuth.getInstance();
 
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -81,13 +82,12 @@ public class LoginActivity extends AppCompatActivity {
                             if(!task.isSuccessful()){
                                 Toast.makeText(LoginActivity.this, "Falha ao se autenticar, tente novamente.", Toast.LENGTH_SHORT).show();
                             }else{
+                                mFirebaseAuth.addAuthStateListener(mAuthStateListener);
                                 Intent intentHome = new Intent(LoginActivity.this, HomeActivity.class);
                                 startActivity(intentHome);
                             }
                         }
                     });
-                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                    startActivity(intent);
                 }else{
                     Toast.makeText(LoginActivity.this, "Algo deu errado.", Toast.LENGTH_SHORT).show();
                 }
@@ -106,6 +106,5 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        mFirebaseAuth.addAuthStateListener(mAuthStateListener);
     }
 }

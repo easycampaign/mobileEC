@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,6 +21,7 @@ import org.w3c.dom.Text;
 
 public class CadastroActivity extends AppCompatActivity {
 
+    TextView txtRegistrado;
     EditText edtEmail, edtSenha, edtConfirmacao;
     Button btnRegistro;
     FirebaseAuth mFirebaseAuth;
@@ -34,7 +36,16 @@ public class CadastroActivity extends AppCompatActivity {
         edtEmail = findViewById(R.id.edtEmail);
         edtSenha = findViewById(R.id.edtSenha);
         edtConfirmacao = findViewById(R.id.edtConfirmacao);
+        txtRegistrado = findViewById(R.id.txtRegistrado);
         btnRegistro = findViewById(R.id.btnRegistro);
+
+        txtRegistrado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent itLogin = new Intent(CadastroActivity.this, LoginActivity.class);
+                startActivity(itLogin);
+            }
+        });
 
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +53,7 @@ public class CadastroActivity extends AppCompatActivity {
                 Boolean valido = true;
                 String email = edtEmail.getText().toString().trim().toLowerCase();
                 String senha = edtSenha.getText().toString();
-                String confirmacao = edtConfirmacao.toString();
+                String confirmacao = edtConfirmacao.getText().toString();
 
                 // Se o email estiver vazio
                 if(TextUtils.isEmpty(email)){
@@ -66,8 +77,6 @@ public class CadastroActivity extends AppCompatActivity {
 
                 if(valido){
                     adicionarUsuario(email, senha, confirmacao, valido);
-                    Intent intent = new Intent(CadastroActivity.this, HomeActivity.class);
-                    startActivity(intent);
                 }else{
                     Toast.makeText(CadastroActivity.this, "Algo deu errado.", Toast.LENGTH_SHORT).show();
                 }

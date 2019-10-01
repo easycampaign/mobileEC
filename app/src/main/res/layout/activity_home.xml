@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +9,6 @@
     android:padding="10dp"
     android:orientation="vertical"
     android:background="@color/backgroundColor">
-
 
     <LinearLayout
         android:clipToPadding="false"
@@ -21,6 +21,8 @@
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
             xmlns:android="http://schemas.android.com/apk/res/android">
 
             <LinearLayout
@@ -60,6 +62,8 @@
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
             xmlns:android="http://schemas.android.com/apk/res/android">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,24 +110,28 @@
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
             xmlns:android="http://schemas.android.com/apk/res/android">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center">
+
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circle_bg_purple"
-                    android:src="@drawable/ic_attach_money_black_24dp"
+                    android:background="@drawable/circle_bg_yellow"
+                    android:src="@drawable/ic_store_black_24dp"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="@string/orcamento"/>
+                    android:text="@string/estoque_atual"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -133,13 +141,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/cheque_suas_campanhas"
+                    android:text="@string/texto_aqui"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
@@ -185,11 +195,12 @@
         android:orientation="horizontal"
         android:layout_height="wrap_content">
 
-        <!-- Orcamento -->
         <androidx.cardview.widget.CardView
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
             xmlns:android="http://schemas.android.com/apk/res/android">
 
             <LinearLayout
@@ -198,60 +209,26 @@
                 android:orientation="vertical"
                 android:gravity="center">
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@drawable/circle_bg_yellow"
-                    android:src="@drawable/ic_store_black_24dp"
-                    android:padding="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/estoque_atual"/>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/lightGray"
-                    android:layout_margin="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/texto_aqui"
-                    android:padding="5dp"
-                    android:textColor="@android:color/darker_gray"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:layout_margin="10dp"
-            xmlns:android="http://schemas.android.com/apk/res/android">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/circle_bg_green"
                     android:src="@drawable/ic_date_range_black_24dp"
                     android:padding="10dp"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:text="@string/calendario"/>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/lightGray"
                     android:layout_margin="10dp"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

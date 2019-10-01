@@ -17,4 +17,6 @@
     <string name="calendario">Calendário</string>
     <string name="estoque_atual">Estoque atual</string>
     <string name="texto_aqui">Texto aqui</string>
+    <string name="visao_geral">Visão Geral</string>
+    <string name="cadastrar">Cadastrar</string>
 </resources>
