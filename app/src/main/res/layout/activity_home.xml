@@ -8,6 +8,7 @@
     tools:context=".HomeActivity"
     android:padding="10dp"
     android:orientation="vertical"
+    android:gravity="center"
     android:background="@color/backgroundColor">
 
     <LinearLayout
@@ -18,6 +19,7 @@
         android:layout_height="wrap_content">
         <!-- -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_todas_campanhas"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
@@ -42,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="@string/estoque_atual"/>
+                    android:text="@string/todas_as_campanhas"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -52,13 +54,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/texto_aqui"
+                    android:text="@string/_2_campanhas"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_campanhas_ativas"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
@@ -91,7 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/texto_aqui"
+                    android:text="@string/_1_campanha_ativa"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
             </LinearLayout>
@@ -107,6 +110,7 @@
 
         <!-- Orcamento -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_estoque"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
@@ -141,18 +145,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/texto_aqui"
+                    android:text="@string/_50_do_estoque_disponivel"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_desempenho"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
+            android:onClick=""
             xmlns:android="http://schemas.android.com/apk/res/android">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -196,6 +202,7 @@
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_calendario"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
@@ -233,7 +240,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/texto_aqui"
+                    android:text="@string/agendar_campanhas"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
             </LinearLayout>
