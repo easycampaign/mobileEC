@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:padding="30dp"
+    android:orientation="vertical"
+    tools:context=".CadastroCampanhaActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/cinza_rebelde"
+        android:src="@drawable/ic_campanha_add_white_24dp"
+        android:padding="20dp"/>
+    <EditText
+        android:id="@+id/edtNomeCampanha"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:hint="Nome da campanha"/>
+
+    <EditText
+        android:id="@+id/edtDataInicioCampanha"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:hint="Data de inicio"/>
+
+    <EditText
+        android:id="@+id/edtDataFimCampanha"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:hint="Data fim"/>
+
+    <Spinner
+        android:id="@+id/spinnerProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/branco"
+        android:entries="@array/produtos"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCadastrarCampanha"
+        android:layout_marginTop="20dp"
+        android:background="@color/azul_marinho"
+        android:textColor="@color/branco"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Adicionar campanha" />
+
+</LinearLayout>

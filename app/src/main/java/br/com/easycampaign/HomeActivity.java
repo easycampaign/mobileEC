@@ -1,13 +1,14 @@
 package br.com.easycampaign;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
+import br.com.easycampaign.model.Campanha;
+
+public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
     private CardView cardCampanhas, cardCampanhasAtivas, cardEstoque, cardDesempenho, cardCalendario;
 
@@ -23,7 +24,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         cardCalendario = (CardView) findViewById(R.id.card_calendario);
 
         cardCampanhas.setOnClickListener(this);
-        cardCampanhasAtivas.setOnClickListener(HomeActivity.this);
+        cardCampanhasAtivas.setOnClickListener(this);
         cardEstoque.setOnClickListener(this);
         cardDesempenho.setOnClickListener(this);
         cardCalendario.setOnClickListener(this);
@@ -33,11 +34,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()){
-            case R.id.card_todas_campanhas : intent = new Intent(this, CampanhasActivity.class);startActivity(intent);break;
-            case R.id.card_campanhas_ativas : intent = new Intent(this, CampanhaAtivaActivity.class);startActivity(intent);break;
+            case R.id.card_todas_campanhas : intent = new Intent(this, CampanhaActivity.class);startActivity(intent);break;
+            case R.id.card_campanhas_ativas : intent = new Intent(this, CadastroCampanhaActivity.class);startActivity(intent);break;
             case R.id.card_estoque : intent = new Intent(this, EstoqueActivity.class);startActivity(intent);break;
             case R.id.card_desempenho : intent = new Intent(this, DesempenhoActivity.class);startActivity(intent);break;
-            case R.id.card_calendario : intent = new Intent(this, CalendarioActivity.class);startActivity(intent);break;
+            case R.id.card_calendario : intent = new Intent(this, BaseActivity.class);startActivity(intent);break;
             default:break;
         }
     }

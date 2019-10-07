@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
+        <activity android:name=".BaseActivity"></activity>
         <activity android:name=".DesempenhoActivity" />
         <activity android:name=".EstoqueActivity" />
         <activity android:name=".CalendarioActivity" />
-        <activity android:name=".CampanhaAtivaActivity" />
-        <activity android:name=".CampanhasActivity" />
+        <activity android:name=".CampanhaActivity" />
+        <activity android:name=".CadastroCampanhaActivity" />
         <activity android:name=".HomeActivity" />
         <activity
             android:name=".LoginActivity"
@@ -31,8 +32,8 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

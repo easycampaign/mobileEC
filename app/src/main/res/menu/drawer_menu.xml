@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/optPerfil" android:title="@string/perfil" android:icon="@drawable/ic_account_black_24dp" />
+    <item android:id="@+id/optHome" android:title="@string/inicio" android:icon="@drawable/ic_home_black_24dp" />
+    <item android:id="@+id/optConfig" android:title="@string/configura_o" android:icon="@drawable/ic_settings_black_24dp" />
+    <item android:id="@+id/optSair" android:title="@string/sair" android:icon="@drawable/ic_exit_to_app_black_24dp" />
+</menu>
