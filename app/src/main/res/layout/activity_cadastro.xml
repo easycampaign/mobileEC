@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/branco"
-    tools:context=".LoginActivity">
+    tools:context=".activities.LoginActivity">
 
     <ImageView
         android:id="@+id/imgRegistro"
@@ -28,6 +28,8 @@
         android:ems="10"
         android:background="@color/cinza"
         android:inputType="textEmailAddress"
+        android:textColorHint="@color/cinza_rebelde"
+        android:textColor="@color/cinza_rebelde"
         android:textAlignment="viewEnd"
         android:hint="@string/email"
         android:textSize="24sp"
@@ -48,8 +50,11 @@
         android:inputType="textPassword"
         android:textAlignment="viewEnd"
         android:hint="@string/senha"
+        android:textColorHint="@color/cinza_rebelde"
+        android:textColor="@color/cinza_rebelde"
         android:textSize="24sp"
         android:autofillHints="" />
+
 
     <EditText
         android:id="@+id/edtConfirmacao"
@@ -63,6 +68,8 @@
         android:inputType="textPassword"
         android:textAlignment="viewEnd"
         android:hint="@string/confirme_sua_senha"
+        android:textColorHint="@color/cinza_rebelde"
+        android:textColor="@color/cinza_rebelde"
         android:textSize="24sp"
         android:autofillHints="" />
 

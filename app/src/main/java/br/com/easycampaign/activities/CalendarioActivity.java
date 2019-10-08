@@ -1,8 +1,10 @@
-package br.com.easycampaign;
+package br.com.easycampaign.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import br.com.easycampaign.R;
 
 public class CalendarioActivity extends AppCompatActivity {
 

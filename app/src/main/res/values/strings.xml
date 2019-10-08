@@ -15,14 +15,14 @@
     <string name="acompanhe_o_desempenho_de_sua_loja">Acompanhe o desempenho de sua loja</string>
     <string name="campanhas_ativas">Campanhas Ativas</string>
     <string name="calendario">Calendário</string>
-    <string name="estoque_atual">Estoque atual</string>
+    <string name="estoque_atual">Estoque</string>
     <string name="texto_aqui">Texto aqui</string>
     <string name="visao_geral">Visão Geral</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="todas_as_campanhas">Todas as campanhas</string>
     <string name="_2_campanhas">2 campanhas</string>
-    <string name="_1_campanha_ativa">1 campanha ativa</string>
-    <string name="_50_do_estoque_disponivel">50% do estoque disponivel</string>
+    <string name="_1_campanha_ativa">Registre uma nova campanha</string>
+    <string name="_50_do_estoque_disponivel">Verifique o estoque disponivel</string>
     <string name="agendar_campanhas">Agendar campanhas</string>
     <string name="action_settings">Settings</string>
 
@@ -32,7 +32,9 @@
     <string name="sair">Sair</string>
     <string name="abrir">Abrir</string>
     <string name="fechar">Fechar</string>
-    
+    <string name="adicionar_campanha">Adicionar Campanha</string>
+    <string name="adicione_um_produto">Adicione um produto</string>
+
     <array name="produtos">
         <item>Camisetas</item>
         <item>Moletom</item>

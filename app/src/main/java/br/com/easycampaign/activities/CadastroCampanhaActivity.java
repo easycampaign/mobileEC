@@ -1,4 +1,4 @@
-package br.com.easycampaign;
+package br.com.easycampaign.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import br.com.easycampaign.R;
 import br.com.easycampaign.model.Campanha;
 
 public class CadastroCampanhaActivity extends AppCompatActivity {
@@ -35,7 +36,7 @@ public class CadastroCampanhaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastra_campanha);
 
-        database = FirebaseDatabase.getInstance().getReference("campanhas");
+        database = FirebaseDatabase.getInstance().getReference("contas");
         firebaseAuth = FirebaseAuth.getInstance();
 
         edtNomeCampanha = findViewById(R.id.edtNomeCampanha);
@@ -63,7 +64,15 @@ public class CadastroCampanhaActivity extends AppCompatActivity {
 
             Campanha campanha = new Campanha(id, nome, produto, dataInicio, dataFim);
 
-            database.child(id).setValue(campanha);
+            database.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("campanhas").child(id).setValue(campanha).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    Toast.makeText(CadastroCampanhaActivity.this, "Campanha adicionada com sucesso.", Toast.LENGTH_SHORT).show();
+                    edtNomeCampanha.getText().clear();
+                    edtDataInicio.getText().clear();
+                    edtDataFim.getText().clear();
+                }
+            });
 //            database.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(campanha).addOnCompleteListener(new OnCompleteListener<Void>() {
 //                @Override
 //                public void onComplete(@NonNull Task<Void> task) {

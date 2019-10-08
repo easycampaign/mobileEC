@@ -1,4 +1,4 @@
-package br.com.easycampaign;
+package br.com.easycampaign.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import br.com.easycampaign.R;
 
 public class LoginActivity extends AppCompatActivity {
     FirebaseAuth mFirebaseAuth;
@@ -43,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
                 FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
                 if (mFirebaseUser != null){
                     Toast.makeText(LoginActivity.this, "Bem vindo", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+                    Intent i = new Intent(LoginActivity.this, BaseActivity.class);
                     startActivity(i);
                 }else{
                     Toast.makeText(LoginActivity.this, "Bem vindo", Toast.LENGTH_SHORT).show();

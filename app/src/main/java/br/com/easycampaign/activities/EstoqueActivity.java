@@ -1,14 +1,16 @@
-package br.com.easycampaign;
+package br.com.easycampaign.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class DesempenhoActivity extends AppCompatActivity {
+import br.com.easycampaign.R;
+
+public class EstoqueActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_desempenho);
+        setContentView(R.layout.activity_estoque);
     }
 }

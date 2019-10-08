@@ -1,4 +1,4 @@
-package br.com.easycampaign;
+package br.com.easycampaign.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import org.w3c.dom.Text;
+import br.com.easycampaign.R;
 
 public class CadastroActivity extends AppCompatActivity {
 

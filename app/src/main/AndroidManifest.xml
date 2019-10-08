@@ -9,21 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
-        <activity android:name=".BaseActivity"></activity>
-        <activity android:name=".DesempenhoActivity" />
-        <activity android:name=".EstoqueActivity" />
-        <activity android:name=".CalendarioActivity" />
-        <activity android:name=".CampanhaActivity" />
-        <activity android:name=".CadastroCampanhaActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".activities.BaseActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".activities.DesempenhoActivity" />
+        <activity android:name=".activities.EstoqueActivity" />
+        <activity android:name=".activities.CalendarioActivity" />
+        <activity android:name=".activities.CampanhaActivity" />
+        <activity android:name=".activities.CadastroCampanhaActivity" />
+        <activity android:name=".activities.HomeActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".CadastroActivity"
+            android:name=".activities.CadastroActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".StartActivity"
+            android:name=".activities.StartActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

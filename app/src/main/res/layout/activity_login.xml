@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/branco"
-    tools:context=".LoginActivity">
+    tools:context=".activities.LoginActivity">
 
     <ImageView
         android:id="@+id/imgLogin"
@@ -30,6 +30,8 @@
         android:inputType="textEmailAddress"
         android:textAlignment="viewEnd"
         android:hint="@string/email"
+        android:textColorHint="@color/cinza_rebelde"
+        android:textColor="@color/cinza_rebelde"
         android:textSize="24sp"
         android:autofillHints="" />
 
@@ -44,6 +46,8 @@
         android:layout_marginTop="28dp"
         android:ems="10"
         android:background="@color/cinza"
+        android:textColorHint="@color/cinza_rebelde"
+        android:textColor="@color/cinza_rebelde"
         android:inputType="textPassword"
         android:textAlignment="viewEnd"
         android:hint="@string/senha"

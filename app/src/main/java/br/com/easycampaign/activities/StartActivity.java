@@ -1,4 +1,4 @@
-package br.com.easycampaign;
+package br.com.easycampaign.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import br.com.easycampaign.R;
 
 public class StartActivity extends AppCompatActivity {
 

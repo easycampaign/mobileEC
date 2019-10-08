@@ -1,14 +1,15 @@
-package br.com.easycampaign;
+package br.com.easycampaign.activities;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import br.com.easycampaign.model.Campanha;
+import br.com.easycampaign.R;
 
-public class HomeActivity extends BaseActivity implements View.OnClickListener {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     private CardView cardCampanhas, cardCampanhasAtivas, cardEstoque, cardDesempenho, cardCalendario;
 
