@@ -2,9 +2,14 @@ package br.com.easycampaign.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -24,10 +29,11 @@ import br.com.easycampaign.model.Campanha;
 
 public class CampanhaActivity extends AppCompatActivity {
 
+    public static final String CAMPANHA_NOME = "campanhanome";
+    public static final String CAMPANHA_ID = "campanhaid";
 
     ListView listViewCampanha;
     List<Campanha> campanhaList;
-
 
     //Firebase
     DatabaseReference databaseCampanha;
@@ -38,12 +44,36 @@ public class CampanhaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_campanha);
 
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         listViewCampanha = findViewById(R.id.listViewCampanha);
         campanhaList = new ArrayList<>();
         firebaseAuth = FirebaseAuth.getInstance();
         databaseCampanha = FirebaseDatabase.getInstance().getReference("contas").child(firebaseAuth.getCurrentUser().getUid()).child("campanhas");
+
+        listViewCampanha.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Campanha campanha = campanhaList.get(i);
+                Intent intent = new Intent(getApplicationContext(), CadastroProdutoActivity.class);
+                intent.putExtra(CAMPANHA_ID, campanha.getCampanhaId());
+                intent.putExtra(CAMPANHA_NOME, campanha.getCampanhaNome());
+                startActivity(intent);
+            }
+        });
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == android.R.id.home){
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onStart() {

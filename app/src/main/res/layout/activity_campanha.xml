@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     android:orientation="vertical"
     tools:context=".activities.CampanhaActivity">
+
+    <include layout="@layout/toolbar"/>
 
     <ListView
         android:id="@+id/listViewCampanha"

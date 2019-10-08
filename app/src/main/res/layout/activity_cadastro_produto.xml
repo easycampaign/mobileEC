@@ -4,75 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/branco"
-    android:padding="30dp"
     android:orientation="vertical"
-    tools:context=".activities.CadastroCampanhaActivity">
+    tools:context=".activities.CadastroProdutoActivity">
 
+    <include layout="@layout/toolbar"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="130dp"
+        android:layout_height="160dp"
         android:layout_gravity="center_horizontal"
         android:padding="13dp"
-        android:src="@drawable/ic_campanha_add_white_24dp"
-        app:civ_border_color="@color/preto"
-        app:civ_border_width="3dp"
+        android:src="@drawable/ic_add_produto_white_24dp"
+        app:civ_border_color="@color/azul_marinho"
+        app:civ_border_width="9dp"
         app:civ_circle_background_color="@color/azul_marinho" />
 
     <TextView
-        android:layout_width="140dp"
+        android:id="@+id/txtNmCampanha"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="5dp"
         android:textStyle="bold"
-        android:text="@string/adicionar_campanha" />
+        android:text="@string/adicione_um_produto" />
 
     <EditText
-        android:id="@+id/edtNomeCampanha"
+        android:id="@+id/edtNomeProduto"
         android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:ems="10"
-        android:hint="Nome da campanha"/>
+        android:hint="Nome do produto"/>
 
     <EditText
-        android:id="@+id/edtDataInicioCampanha"
+        android:id="@+id/edtDescProduto"
         android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="date"
+        android:inputType="text"
         android:ems="10"
-        android:hint="Data de inicio"/>
+        android:hint="@string/descricao"/>
 
     <EditText
-        android:id="@+id/edtDataFimCampanha"
+        android:id="@+id/edtQtdProduto"
         android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="date"
+        android:inputType="number"
         android:ems="10"
-        android:hint="Data fim"/>
+        android:hint="@string/quantidade"/>
 
-    <Spinner
-        android:id="@+id/spinnerProdutos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@color/branco"
-        android:entries="@array/produtos"
-        app:layout_constraintStart_toStartOf="parent" />
+<!--    <Spinner-->
+<!--        android:id="@+id/spinnerProdutos"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:background="@color/branco"-->
+<!--        android:entries="@array/produtos"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
     <Button
-        android:id="@+id/btnCadastrarCampanha"
+        android:id="@+id/btnCadastrarProduto"
         android:layout_marginTop="20dp"
         android:background="@color/azul_marinho"
         android:textColor="@color/branco"
         android:layout_gravity="center_horizontal"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="Adicionar campanha" />
+        android:text="@string/adicionar_produto" />
+
+    <ListView
+        android:id="@+id/listViewCampanha"
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

@@ -51,7 +51,7 @@ public class BaseActivity extends AppCompatActivity{
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.abrir, R.string.fechar);
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
-        mToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.branco));
+        mToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.preto));
 
         navigationView = findViewById(R.id.navView);
         navigationView.setItemIconTintList(null);
@@ -82,8 +82,6 @@ public class BaseActivity extends AppCompatActivity{
                         mDrawerLayout.closeDrawer(GravityCompat.START);
                         startActivity(intent);
                         break;
-                    case R.id.card_calendario:
-                        break;
                     case R.id.optSair:
                         finish();
                         break;
@@ -99,7 +97,7 @@ public class BaseActivity extends AppCompatActivity{
         cardCampanhasAtivas = (CardView) findViewById(R.id.card_campanhas_ativas);
         cardEstoque = (CardView) findViewById(R.id.card_estoque);
         cardDesempenho = (CardView) findViewById(R.id.card_desempenho);
-        cardCalendario = (CardView) findViewById(R.id.card_calendario);
+        //cardCalendario = (CardView) findViewById(R.id.card_calendario);
 
     }
 
@@ -110,7 +108,7 @@ public class BaseActivity extends AppCompatActivity{
             case R.id.card_campanhas_ativas : intent = new Intent(this, CadastroCampanhaActivity.class);startActivity(intent);break;
             case R.id.card_estoque : intent = new Intent(this, EstoqueActivity.class);startActivity(intent);break;
             case R.id.card_desempenho : intent = new Intent(this, DesempenhoActivity.class);startActivity(intent);break;
-            case R.id.card_calendario : intent = new Intent(this, BaseActivity.class);startActivity(intent);break;
+            //case R.id.card_calendario : intent = new Intent(this, BaseActivity.class);startActivity(intent);break;
             default:break;
         }
     }
