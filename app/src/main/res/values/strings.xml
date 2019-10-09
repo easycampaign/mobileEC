@@ -48,4 +48,6 @@
     <string name="produtos">Produtos</string>
     <string name="digite_um_novo_nome">Digite um novo nome</string>
     <string name="atualizar">Atualizar</string>
+    <string name="nome_da_campanha">Nome da campanha</string>
+    <string name="data_de_inicio">Data de inicio</string>
 </resources>

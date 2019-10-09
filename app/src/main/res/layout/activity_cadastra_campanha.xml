@@ -5,74 +5,90 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/branco"
-    android:padding="30dp"
     android:orientation="vertical"
     tools:context=".activities.CadastroCampanhaActivity">
 
+    <include layout="@layout/toolbar"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/azul_claro"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center_horizontal"
-        android:padding="13dp"
         android:src="@drawable/ic_campanha_add_white_24dp"
         app:civ_border_color="@color/preto"
         app:civ_border_width="3dp"
         app:civ_circle_background_color="@color/azul_marinho" />
 
     <TextView
-        android:layout_width="140dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_marginTop="25dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="5dp"
         android:textStyle="bold"
         android:text="@string/adicionar_campanha" />
 
     <EditText
         android:id="@+id/edtNomeCampanha"
-        android:layout_margin="20dp"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:ems="10"
-        android:hint="Nome da campanha"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/nome_da_campanha"/>
 
     <EditText
         android:id="@+id/edtDataInicioCampanha"
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:hint="Data de inicio"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/data_de_inicio"/>
 
     <EditText
         android:id="@+id/edtDataFimCampanha"
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:hint="Data fim"/>
 
     <Spinner
         android:id="@+id/spinnerProdutos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
         android:background="@color/branco"
         android:entries="@array/produtos"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnCadastrarCampanha"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:background="@color/azul_marinho"
         android:textColor="@color/branco"
         android:layout_gravity="center_horizontal"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:text="Adicionar campanha" />
 
 </LinearLayout>

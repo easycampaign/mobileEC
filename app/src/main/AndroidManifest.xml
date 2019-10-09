@@ -23,7 +23,9 @@
         <activity
             android:name=".activities.CampanhasActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".activities.CadastroCampanhaActivity" />
+        <activity
+            android:name=".activities.CadastroCampanhaActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".activities.HomeActivity" />
         <activity
             android:name=".activities.LoginActivity"

@@ -2,11 +2,13 @@ package br.com.easycampaign.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,6 +38,13 @@ public class CadastroCampanhaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastra_campanha);
 
+        // Toolbar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        //Firebase
         database = FirebaseDatabase.getInstance().getReference("contas");
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -83,5 +92,16 @@ public class CadastroCampanhaActivity extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Por favor, digite um nome para a campanha", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    // Making the back button work
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
