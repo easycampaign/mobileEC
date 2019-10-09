@@ -15,7 +15,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import br.com.easycampaign.R;
-import br.com.easycampaign.model.Campanha;
 
 public class CadastroProdutoActivity extends AppCompatActivity {
 
@@ -48,8 +47,8 @@ public class CadastroProdutoActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
 
-        String id = intent.getStringExtra(CampanhaActivity.CAMPANHA_ID);
-        String nome = intent.getStringExtra(CampanhaActivity.CAMPANHA_NOME);
+        String id = intent.getStringExtra(CampanhasActivity.CAMPANHA_ID);
+        String nome = intent.getStringExtra(CampanhasActivity.CAMPANHA_NOME);
 
         txtNmCampanha.setText(nome);
     }

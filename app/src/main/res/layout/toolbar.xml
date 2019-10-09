@@ -2,7 +2,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar"
-    android:background="@color/azul_marinho"
-    app:titleTextColor="@color/branco"
+    android:background="@color/branco"
+    app:titleTextColor="@color/preto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 </androidx.appcompat.widget.Toolbar>

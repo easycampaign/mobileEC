@@ -35,7 +35,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()){
-            case R.id.card_todas_campanhas : intent = new Intent(this, CampanhaActivity.class);startActivity(intent);break;
+            case R.id.card_todas_campanhas : intent = new Intent(this, CampanhasActivity.class);startActivity(intent);break;
             case R.id.card_campanhas_ativas : intent = new Intent(this, CadastroCampanhaActivity.class);startActivity(intent);break;
             case R.id.card_estoque : intent = new Intent(this, EstoqueActivity.class);startActivity(intent);break;
             case R.id.card_desempenho : intent = new Intent(this, DesempenhoActivity.class);startActivity(intent);break;

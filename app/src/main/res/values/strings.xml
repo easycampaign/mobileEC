@@ -43,4 +43,7 @@
     <string name="adicionar_produto">Adicionar produto</string>
     <string name="descricao">Descrição</string>
     <string name="quantidade">Quantidade</string>
+    <string name="datainicio">DataInicio</string>
+    <string name="campanha">Campanha</string>
+    <string name="produtos">Produtos</string>
 </resources>

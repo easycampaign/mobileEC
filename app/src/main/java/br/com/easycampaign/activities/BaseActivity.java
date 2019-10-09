@@ -11,8 +11,6 @@ import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -62,7 +60,7 @@ public class BaseActivity extends AppCompatActivity{
                     case R.id.card_todas_campanhas:
                         //trocaFragment(new FuscaFragment());
                         mDrawerLayout.closeDrawer(GravityCompat.START);
-                        Intent intentCampanha = new Intent(BaseActivity.this, CampanhaActivity.class);
+                        Intent intentCampanha = new Intent(BaseActivity.this, CampanhasActivity.class);
                         startActivity(intentCampanha);
                         break;
                     case R.id.card_campanhas_ativas:
@@ -104,7 +102,7 @@ public class BaseActivity extends AppCompatActivity{
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()){
-            case R.id.card_todas_campanhas : intent = new Intent(this, CampanhaActivity.class);startActivity(intent);break;
+            case R.id.card_todas_campanhas : intent = new Intent(this, CampanhasActivity.class);startActivity(intent);break;
             case R.id.card_campanhas_ativas : intent = new Intent(this, CadastroCampanhaActivity.class);startActivity(intent);break;
             case R.id.card_estoque : intent = new Intent(this, EstoqueActivity.class);startActivity(intent);break;
             case R.id.card_desempenho : intent = new Intent(this, DesempenhoActivity.class);startActivity(intent);break;
