@@ -46,4 +46,6 @@
     <string name="datainicio">DataInicio</string>
     <string name="campanha">Campanha</string>
     <string name="produtos">Produtos</string>
+    <string name="digite_um_novo_nome">Digite um novo nome</string>
+    <string name="atualizar">Atualizar</string>
 </resources>

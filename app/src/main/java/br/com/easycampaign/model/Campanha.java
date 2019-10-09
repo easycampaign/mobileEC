@@ -9,12 +9,22 @@ public class Campanha {
     private String campanhaDataFim;
 
 
+    // Constructor vazio
     public Campanha(){
 
     }
 
-    //Constructor
+    //Constructor cheio
     public Campanha(String campanhaId, String campanhaNome, String campanhaProduto, String campanhaDataInicio, String campanhaDataFim) {
+        this.campanhaId = campanhaId;
+        this.campanhaNome = campanhaNome;
+        this.campanhaProduto = campanhaProduto;
+        this.campanhaDataInicio = campanhaDataInicio;
+        this.campanhaDataFim = campanhaDataFim;
+    }
+
+    //Construtor personalizado
+    public Campanha(String campanhaId, String campanhaNome, String campanhaDataInicio, String campanhaDataFim) {
         this.campanhaId = campanhaId;
         this.campanhaNome = campanhaNome;
         this.campanhaProduto = campanhaProduto;

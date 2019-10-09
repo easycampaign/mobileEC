@@ -21,10 +21,10 @@
 
     <TextView
         android:id="@+id/txtNmCampanha"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="5dp"
         android:layout_marginTop="30dp"
         android:textStyle="bold"
         android:text="@string/campanha" />
