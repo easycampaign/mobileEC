@@ -50,4 +50,12 @@
     <string name="atualizar">Atualizar</string>
     <string name="nome_da_campanha">Nome da campanha</string>
     <string name="data_de_inicio">Data de inicio</string>
+    <string name="produto">Produto</string>
+    <string name="produto_removido">Produto removido com sucesso</string>
+    <string name="campanha_removida">Campanha removida com sucesso,</string>
+    <string name="produto_atualizado">Produto atualizado com sucesso.</string>
+    <string name="campanha_atualizada">Campanha atualizada com sucesso</string>
+    <string name="digite_uma_nova_descri_o">Digite uma nova descrição</string>
+    <string name="digite_uma_nova_quantidade">Digite uma nova quantidade</string>
+    <string name="verifique_suas_campanhas">Verifique suas campanhas</string>
 </resources>

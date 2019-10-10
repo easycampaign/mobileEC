@@ -43,7 +43,6 @@ public class CadastroCampanhaActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         //Firebase
         database = FirebaseDatabase.getInstance().getReference("contas");
         firebaseAuth = FirebaseAuth.getInstance();

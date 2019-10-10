@@ -87,7 +87,8 @@ public class CampanhaActivity extends AppCompatActivity {
         databaseCampanha.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(CampanhaActivity.this, "Campanha removida com sucesso,", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CampanhaActivity.this, R.string.campanha_removida, Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
     }
@@ -148,7 +149,7 @@ public class CampanhaActivity extends AppCompatActivity {
         databaseCampanha.setValue(campanha).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(CampanhaActivity.this, "Campanha atualizada com sucesso", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CampanhaActivity.this, getString(R.string.campanha_atualizada), Toast.LENGTH_SHORT).show();
             }
         });
         return true;

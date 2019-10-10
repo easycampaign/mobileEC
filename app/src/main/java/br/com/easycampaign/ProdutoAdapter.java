@@ -1,7 +1,6 @@
 package br.com.easycampaign;
 
 import android.app.Activity;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,22 +10,21 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
-import br.com.easycampaign.model.Campanha;
+import br.com.easycampaign.model.Produto;
 
-public class CampanhaAdapter extends ArrayAdapter<Campanha>{
+public class ProdutoAdapter extends ArrayAdapter<Produto> {
 
     private Activity context;
-    private List<Campanha> campanhaList;
+    private List<Produto> produtoList;
 
-    public CampanhaAdapter(Activity context, List<Campanha> campanhaList){
-        super(context, R.layout.list_layout, campanhaList);
+    public ProdutoAdapter(Activity context, List<Produto> produtoList) {
+        super(context, R.layout.list_layout, produtoList);
         this.context = context;
-        this.campanhaList = campanhaList;
+        this.produtoList = produtoList;
     }
+
 
     @NonNull
     @Override
@@ -34,13 +32,14 @@ public class CampanhaAdapter extends ArrayAdapter<Campanha>{
         LayoutInflater inflater = context.getLayoutInflater();
 
         View listViewItem = inflater.inflate(R.layout.list_layout, null, true);
-        TextView txtCampanha = listViewItem.findViewById(R.id.txtItem);
-        TextView txtProduto = listViewItem.findViewById(R.id.txtSubItem);
 
-        Campanha campanha = campanhaList.get(position);
+        TextView txtProduto = listViewItem.findViewById(R.id.txtItem);
+        TextView txtQtd = listViewItem.findViewById(R.id.txtSubItem);
 
-        txtCampanha.setText(campanha.getCampanhaNome());
-        txtProduto.setText(campanha.getCampanhaProduto());
+        Produto produto = produtoList.get(position);
+
+        txtProduto.setText(produto.getProdutoNome());
+        txtQtd.setText(produto.getProdutoQtd());
         return listViewItem;
     }
 }

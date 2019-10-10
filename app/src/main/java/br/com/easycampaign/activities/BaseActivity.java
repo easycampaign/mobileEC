@@ -29,7 +29,7 @@ public class BaseActivity extends AppCompatActivity{
 
     FirebaseAuth firebaseAuth;
 
-    private CardView cardCampanhas, cardCampanhasAtivas, cardEstoque, cardDesempenho, cardCalendario;
+    private CardView cardCampanhas, cardCampanhasAtivas, cardEstoque, cardAddProduto;
     private TextView txtNomeUsuario, txtEmailUsuario;
 
     @Override
@@ -44,7 +44,6 @@ public class BaseActivity extends AppCompatActivity{
 //        txtEmailUsuario = findViewById(R.id.txtEmailUsuario);
 //        txtEmailUsuario.setText(email);
 
-
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.abrir, R.string.fechar);
         mDrawerLayout.addDrawerListener(mToggle);
@@ -57,29 +56,6 @@ public class BaseActivity extends AppCompatActivity{
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
-                    case R.id.card_todas_campanhas:
-                        //trocaFragment(new FuscaFragment());
-                        mDrawerLayout.closeDrawer(GravityCompat.START);
-                        Intent intentCampanha = new Intent(BaseActivity.this, CampanhasActivity.class);
-                        startActivity(intentCampanha);
-                        break;
-                    case R.id.card_campanhas_ativas:
-                        //trocaFragment(new UnoFragment());
-                        Intent intentAddCampanha = new Intent(BaseActivity.this, CadastroCampanhaActivity.class);
-                        mDrawerLayout.closeDrawer(GravityCompat.START);
-                        startActivity(intentAddCampanha);
-                        break;
-                    case R.id.card_estoque:
-                        //trocaFragment(new CeltaFragment());
-                        Intent it = new Intent(BaseActivity.this, EstoqueActivity.class);
-                        mDrawerLayout.closeDrawer(GravityCompat.START);
-                        startActivity(it);
-                        break;
-                    case R.id.card_desempenho:
-                        Intent intent = new Intent(BaseActivity.this, DesempenhoActivity.class);
-                        mDrawerLayout.closeDrawer(GravityCompat.START);
-                        startActivity(intent);
-                        break;
                     case R.id.optSair:
                         finish();
                         break;
@@ -94,20 +70,34 @@ public class BaseActivity extends AppCompatActivity{
         cardCampanhas = (CardView) findViewById(R.id.card_todas_campanhas);
         cardCampanhasAtivas = (CardView) findViewById(R.id.card_campanhas_ativas);
         cardEstoque = (CardView) findViewById(R.id.card_estoque);
-        cardDesempenho = (CardView) findViewById(R.id.card_desempenho);
+        cardAddProduto = (CardView) findViewById(R.id.card_add_produto);
         //cardCalendario = (CardView) findViewById(R.id.card_calendario);
-
     }
 
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()){
-            case R.id.card_todas_campanhas : intent = new Intent(this, CampanhasActivity.class);startActivity(intent);break;
-            case R.id.card_campanhas_ativas : intent = new Intent(this, CadastroCampanhaActivity.class);startActivity(intent);break;
-            case R.id.card_estoque : intent = new Intent(this, EstoqueActivity.class);startActivity(intent);break;
-            case R.id.card_desempenho : intent = new Intent(this, DesempenhoActivity.class);startActivity(intent);break;
-            //case R.id.card_calendario : intent = new Intent(this, BaseActivity.class);startActivity(intent);break;
-            default:break;
+            case R.id.card_todas_campanhas:
+                intent = new Intent(this, CampanhasActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.card_campanhas_ativas:
+                intent = new Intent(this, CadastroCampanhaActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.card_estoque:
+                intent = new Intent(this, EstoqueActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.card_add_produto:
+                intent = new Intent(this, CadastroProdutoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.card_calendario:
+                intent = new Intent(this, CalendarioActivity.class);
+                startActivity(intent);
+                break;
+                //case R.id.card_calendario : intent = new Intent(this, BaseActivity.class);startActivity(intent);break;
         }
     }
 

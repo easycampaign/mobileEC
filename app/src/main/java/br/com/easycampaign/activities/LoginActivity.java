@@ -45,10 +45,10 @@ public class LoginActivity extends AppCompatActivity {
                 FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
                 if (mFirebaseUser != null){
                     Toast.makeText(LoginActivity.this, "Bem vindo", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(LoginActivity.this, BaseActivity.class);
-                    startActivity(i);
+                    //Intent i = new Intent(LoginActivity.this, BaseActivity.class);
+                    //startActivity(i);
                 }else{
-                    Toast.makeText(LoginActivity.this, "Bem vindo", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Erro ocorreu ao se autentificar", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Falha ao se autenticar, tente novamente.", Toast.LENGTH_SHORT).show();
                             }else{
                                 mFirebaseAuth.addAuthStateListener(mAuthStateListener);
-                                Intent intentHome = new Intent(LoginActivity.this, HomeActivity.class);
+                                Intent intentHome = new Intent(LoginActivity.this, BaseActivity.class);
                                 startActivity(intentHome);
                             }
                         }
